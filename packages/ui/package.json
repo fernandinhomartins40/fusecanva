@@ -1,0 +1,49 @@
+{
+  "name": "@fuse/ui",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Design system: tokens, componentes acessiveis, icones e temas.",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "sideEffects": [
+    "*.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./styles.css": "./dist/styles.css",
+    "./tokens.css": "./dist/tokens.css",
+    "./components.css": "./dist/components.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -b && node scripts/build-css.mjs",
+    "typecheck": "tsc -b --noEmit && tsc -p tsconfig.test.json",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "dependencies": {
+    "lucide-react": "0.468.0",
+    "radix-ui": "^1.8.1"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.12",
+    "@types/node": "^22.20.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "axe-core": "^4.14.1",
+    "jsdom": "^31.0.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "typescript": "~6.0.3",
+    "vitest": "5.1.0"
+  }
+}

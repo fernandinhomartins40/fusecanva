@@ -1,0 +1,29 @@
+name: Sugerir funcionalidade
+description: Proponha uma melhoria ou recurso novo.
+labels: ["melhoria", "triagem"]
+body:
+  - type: textarea
+    id: problema
+    attributes:
+      label: Problema
+      description: Qual necessidade ou dor esta proposta resolve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposta
+    attributes:
+      label: Proposta
+      description: Como voce imagina a solucao?
+    validations:
+      required: true
+  - type: textarea
+    id: alternativas
+    attributes:
+      label: Alternativas consideradas
+  - type: checkboxes
+    id: principios
+    attributes:
+      label: Principios do projeto
+      options:
+        - label: A proposta funciona offline / local-first ou explica por que nao.
+        - label: A proposta nao depende de servico proprietario obrigatorio.

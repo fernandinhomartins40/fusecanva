@@ -1,0 +1,32 @@
+.team-profile-panel{--tp-surface:#25252d;--tp-border:#45454a;--tp-text:#f4f3f6;--tp-muted:#c6c6ca;--tp-purple:#a370fc;max-width:900px;margin:0 auto;color:var(--tp-text);font:14px/1.45 Arial,sans-serif}
+.team-profile-heading{display:flex;align-items:flex-start;gap:15px;margin-bottom:28px}
+.team-profile-mark{width:48px;height:48px;flex:none;display:grid;place-items:center;border-radius:14px;background:#382a49;color:#d2b8ff}
+.team-profile-heading>div{min-width:0}
+.team-profile-eyebrow{margin:0 0 5px;color:#c3a3f6;font-size:12px;font-weight:700;letter-spacing:.02em}
+.team-profile-heading h2{margin:0;font-size:28px;line-height:1.2;letter-spacing:-.45px}
+.team-profile-description{max-width:600px;margin:9px 0 0;color:var(--tp-muted);font-size:14px}
+.team-profile-feedback{margin:12px 0;padding:10px 12px;border:1px solid #34594b;border-radius:8px;background:#1c3028;color:#d6f4e3;font-size:13px}
+.team-profile-feedback.is-error{border-color:#75444a;background:#342226;color:#ffdce0}
+.team-profile-state{padding:16px;color:var(--tp-muted);font-size:13px}
+.team-profile-card{padding:22px;border:1px solid var(--tp-border);border-radius:12px;background:var(--tp-surface)}
+.team-profile-card-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:24px}
+.team-profile-card-heading h3{margin:0;color:#f5f3f8;font-size:16px;font-weight:700}
+.team-profile-card-heading p{max-width:550px;margin:6px 0 0;color:var(--tp-muted);font-size:13px}
+.team-profile-badge{display:inline-flex;align-items:center;gap:6px;flex:none;padding:6px 9px;border:1px solid #51475d;border-radius:999px;background:#30263c;color:#e4d6f7;font-size:11px;font-weight:650}
+.team-profile-name-field{display:grid;gap:7px;max-width:600px;color:#e5e2e9;font-size:13px;font-weight:650}
+.team-profile-name-field input{width:100%;min-height:44px;box-sizing:border-box;padding:0 12px;border:1px solid #59575f;border-radius:8px;background:#1c1d23;color:#f7f6f9;font:inherit;font-weight:400}
+.team-profile-name-field input:focus-visible{outline:2px solid var(--tp-purple);outline-offset:2px}
+.team-profile-name-field input:disabled{color:#c6c6ca;opacity:1}
+.team-profile-name-field small{color:#aaa7b0;font-size:12px;font-weight:400;line-height:1.5}
+.team-profile-readonly{margin:18px 0 0;color:var(--tp-muted);font-size:12px}
+.team-profile-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:24px;padding-top:18px;border-top:1px solid #3d3d44}
+.team-profile-actions button{min-height:40px;display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:0 14px;border-radius:8px;font:inherit;font-size:13px;font-weight:700;cursor:pointer}
+.team-profile-save{border:0;background:#7b36d9;color:#fff}
+.team-profile-save:hover:not(:disabled){background:#8d4be7}
+.team-profile-save:disabled,.team-profile-cancel:disabled{opacity:.55;cursor:not-allowed}
+.team-profile-cancel{border:1px solid #59575f;background:transparent;color:#e5e2e9}
+.team-profile-cancel:hover:not(:disabled){background:#302f36}
+.team-profile-spinner{width:14px;height:14px;border:2px solid #ffffff66;border-top-color:#fff;border-radius:50%;animation:team-profile-spin .7s linear infinite}
+@keyframes team-profile-spin{to{transform:rotate(360deg)}}
+@media(max-width:600px){.team-profile-heading{gap:11px;margin-bottom:20px}.team-profile-mark{width:40px;height:40px;border-radius:12px}.team-profile-mark svg{width:19px;height:19px}.team-profile-heading h2{font-size:23px}.team-profile-description{font-size:13px}.team-profile-card{padding:16px}.team-profile-card-heading{gap:10px}.team-profile-badge{font-size:10px}.team-profile-actions{justify-content:stretch}.team-profile-actions button{flex:1;min-height:44px;padding-inline:9px}}
+@media(prefers-reduced-motion:reduce){.team-profile-spinner{animation:none}}

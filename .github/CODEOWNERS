@@ -1,0 +1,12 @@
+# CODEOWNERS do Fuse Studio.
+# Placeholder: o time "fuse-maintainers" ainda nao existe na organizacao do GitHub.
+# Quando a organizacao e o time forem criados, descomente as linhas abaixo
+# trocando pelo identificador real no formato @<organizacao>/<time>.
+#
+# *                      @fuse-maintainers
+# /.github/              @fuse-maintainers
+# /packages/format/      @fuse-maintainers
+# /packages/collab/      @fuse-maintainers
+# /packages/authz/       @fuse-maintainers
+# /apps/server/          @fuse-maintainers
+# /docs/adr/             @fuse-maintainers

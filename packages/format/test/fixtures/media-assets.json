@@ -1,0 +1,5 @@
+[
+  { "id": "asset-1", "name": "pixel.png", "mimeType": "image/png", "width": 1, "height": 1, "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==", "fingerprint": "0000000000000000000000000000000000000000000000000000000000000000", "libraryVisible": 1, "createdAt": "2026-01-01T00:00:00.000Z", "scope": "document" },
+  { "id": "asset-2", "name": "remota.jpg", "mimeType": "image/jpeg", "width": 640, "height": 480, "src": "https://example.org/remota.jpg", "fingerprint": "legacy-md5-abc", "libraryVisible": 0, "createdAt": "2026-01-02T00:00:00.000Z" },
+  { "id": "asset-3", "name": "time.png", "mimeType": "image/png", "width": 2, "height": 2, "src": "https://example.org/t.png", "createdAt": "2026-01-03T00:00:00.000Z", "scope": "team", "owner": "user-1" }
+]

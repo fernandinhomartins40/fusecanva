@@ -1,0 +1,16 @@
+{
+  "id": "design-6c8b07b8-1387-4140-ac5f-55abd7d2b722",
+  "name": "Design sem título",
+  "type": "design",
+  "width": 794,
+  "height": 1123,
+  "updatedAt": "2026-11-18T03:23:54.813Z",
+  "pages": [
+    {
+      "id": "page-75a685d2-6a20-49fd-8df8-4cafc3c3c2c5",
+      "name": "Página 1",
+      "background": "#ffffff",
+      "elements": []
+    }
+  ]
+}

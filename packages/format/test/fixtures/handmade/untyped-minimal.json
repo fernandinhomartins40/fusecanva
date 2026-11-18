@@ -1,0 +1,10 @@
+{
+  "id": "design-untyped",
+  "name": "Sem tipo",
+  "width": 800,
+  "height": 600,
+  "updatedAt": "2025-01-01T00:00:00.000Z",
+  "pages": [
+    { "id": "p1", "name": "Página 1", "background": "#ffffff", "elements": [], "cellFormats": {}, "timelineClips": [] }
+  ]
+}

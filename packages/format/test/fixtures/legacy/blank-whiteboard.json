@@ -1,0 +1,16 @@
+{
+  "id": "design-994e3abc-cd44-4b50-859c-c8e2ebbe5525",
+  "name": "Quadro sem título",
+  "type": "whiteboard",
+  "width": 3200,
+  "height": 2000,
+  "updatedAt": "2026-11-18T03:23:54.815Z",
+  "pages": [
+    {
+      "id": "page-c904129c-5db7-4671-b270-439224e7c259",
+      "name": "Quadro 1",
+      "background": "#ffffff",
+      "elements": []
+    }
+  ]
+}

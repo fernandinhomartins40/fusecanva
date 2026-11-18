@@ -1,0 +1,101 @@
+{
+  "id": "design-9d40357c-559f-4ba5-b8c9-582c5625150e",
+  "name": "Post geométrico",
+  "type": "design",
+  "width": 1080,
+  "height": 1080,
+  "updatedAt": "2026-11-18T03:23:54.804Z",
+  "pages": [
+    {
+      "id": "page-23d583fe-983a-4690-a250-5c537d6b01de",
+      "name": "Página 1",
+      "background": "#f5eee6",
+      "elements": [
+        {
+          "id": "shape-6c4438e5-60db-4bed-bbee-f6a95ccff428",
+          "type": "shape",
+          "shape": "rect",
+          "name": "Bloco ameixa",
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 340,
+          "rotation": 0,
+          "fill": "#53324e",
+          "cornerRadius": 0
+        },
+        {
+          "id": "shape-a526a68e-0313-41c1-90c7-65a17cf81872",
+          "type": "shape",
+          "shape": "ellipse",
+          "name": "Sol laranja",
+          "x": 730,
+          "y": 150,
+          "width": 230,
+          "height": 230,
+          "rotation": 0,
+          "fill": "#f4a261",
+          "cornerRadius": 0
+        },
+        {
+          "id": "shape-bd61a64f-c8c5-433b-a25f-aa2f2eb97f94",
+          "type": "shape",
+          "shape": "ellipse",
+          "name": "Ponto lavanda",
+          "x": 120,
+          "y": 720,
+          "width": 150,
+          "height": 150,
+          "rotation": 0,
+          "fill": "#a995cf",
+          "cornerRadius": 0
+        },
+        {
+          "id": "text-0db45d41-b931-4a2a-9bc9-26776914c03e",
+          "type": "text",
+          "name": "Tema",
+          "text": "IDEIA DA SEMANA",
+          "x": 86,
+          "y": 72,
+          "width": 750,
+          "height": 48,
+          "rotation": 0,
+          "fontSize": 25,
+          "fontFamily": "Arial",
+          "color": "#ffffff",
+          "bold": true
+        },
+        {
+          "id": "text-858c686c-6d12-401a-81db-9418eae99534",
+          "type": "text",
+          "name": "Mensagem",
+          "text": "Pequenos passos,\ngrandes caminhos.",
+          "x": 90,
+          "y": 410,
+          "width": 850,
+          "height": 220,
+          "rotation": 0,
+          "fontSize": 70,
+          "fontFamily": "Arial",
+          "color": "#53324e",
+          "bold": true
+        },
+        {
+          "id": "text-69cee162-18a4-42d7-b463-3ebb4402cc77",
+          "type": "text",
+          "name": "Ação",
+          "text": "@SEUPROJETO  ·  SAIBA MAIS",
+          "x": 96,
+          "y": 900,
+          "width": 760,
+          "height": 46,
+          "rotation": 0,
+          "fontSize": 21,
+          "fontFamily": "Arial",
+          "color": "#53324e",
+          "bold": true
+        }
+      ]
+    }
+  ]
+}

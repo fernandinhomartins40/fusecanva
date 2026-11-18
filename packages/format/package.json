@@ -1,0 +1,36 @@
+{
+  "name": "@fuse/format",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Formato aberto .fuse: schemas Zod, JSON Schema, migracoes e (de)serializacao.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./schema/fuse-file.v1.schema.json": "./schema/fuse-file.v1.schema.json"
+  },
+  "files": [
+    "dist",
+    "schema"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc -b --noEmit && tsc -p tsconfig.test.json --noEmit",
+    "schema:generate": "tsc -b && node scripts/generate-schema.mjs",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "@vitest/coverage-v8": "5.1.0",
+    "typescript": "~6.0.3",
+    "vitest": "5.1.0"
+  },
+  "dependencies": {
+    "jszip": "3.10.2",
+    "zod": "4.6.7"
+  }
+}

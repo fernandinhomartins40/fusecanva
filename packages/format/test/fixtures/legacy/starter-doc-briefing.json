@@ -1,0 +1,82 @@
+{
+  "id": "design-84df8ac6-510c-489f-9c7d-d6e2a4c06805",
+  "name": "Briefing de projeto",
+  "type": "doc",
+  "width": 794,
+  "height": 1123,
+  "updatedAt": "2026-11-18T03:23:54.813Z",
+  "pages": [
+    {
+      "id": "page-8fbe47c7-6dd5-4bbe-9ca6-25110a5e383a",
+      "name": "Briefing",
+      "background": "#ffffff",
+      "elements": [],
+      "blocks": [
+        {
+          "id": "block-e094d266-5035-4bfd-ab49-327cdbb34556",
+          "type": "heading",
+          "text": "Briefing de projeto"
+        },
+        {
+          "id": "block-145d1e64-fb3a-4e34-b99a-f27b2ef90da9",
+          "type": "paragraph",
+          "text": "Use este documento para alinhar o objetivo, o público e o resultado esperado."
+        },
+        {
+          "id": "block-380e9e79-69b5-46a6-9924-baa88157ab4d",
+          "type": "subheading",
+          "text": "Objetivo"
+        },
+        {
+          "id": "block-10d2b801-4f87-4a00-99c8-d0ea03b8a278",
+          "type": "paragraph",
+          "text": "Que mudança ou resultado este projeto deve produzir?"
+        },
+        {
+          "id": "block-5f4252f1-f976-41bd-b149-b767edce47ca",
+          "type": "subheading",
+          "text": "Público"
+        },
+        {
+          "id": "block-c3c12e7f-5e09-4c13-bb78-731a31fca02c",
+          "type": "paragraph",
+          "text": "Quem precisa receber esta mensagem ou usar este produto?"
+        },
+        {
+          "id": "block-0c2ec5b5-0b38-4b8c-a17a-0018a99a86e2",
+          "type": "subheading",
+          "text": "Escopo e referências"
+        },
+        {
+          "id": "block-1d0af998-4448-4f81-91e5-cc2bedc74675",
+          "type": "bullet",
+          "text": "Entregáveis, formatos e canais"
+        },
+        {
+          "id": "block-a55480e8-3514-4f26-931e-1e390f12b1d3",
+          "type": "bullet",
+          "text": "Referências, restrições e itens fora do escopo"
+        },
+        {
+          "id": "block-eae2efa7-dfab-4e79-9b4a-b672afa2aab9",
+          "type": "subheading",
+          "text": "Próximos passos"
+        },
+        {
+          "id": "block-15897e90-76c8-4937-880e-5cee5e4ac0b4",
+          "type": "paragraph",
+          "text": "Responsável: __________    Prazo: __________"
+        }
+      ]
+    }
+  ],
+  "docPageSetup": {
+    "preset": "a4",
+    "margins": {
+      "top": 96,
+      "right": 96,
+      "bottom": 96,
+      "left": 96
+    }
+  }
+}

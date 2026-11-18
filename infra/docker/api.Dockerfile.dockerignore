@@ -1,0 +1,6 @@
+# Allowlist: o contexto e a raiz do repositorio (que inclui material de pesquisa local de varios GB).
+# A API atual so precisa do diretorio server/, de text-merge.mjs e do entrypoint.
+*
+!apps/web/server/
+!apps/web/src/text-merge.mjs
+!infra/docker/api-entrypoint.mjs

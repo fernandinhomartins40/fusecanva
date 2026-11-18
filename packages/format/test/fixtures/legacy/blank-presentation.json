@@ -1,0 +1,16 @@
+{
+  "id": "design-9ba03937-9e12-4347-b04c-d90b917a0720",
+  "name": "Apresentação sem título",
+  "type": "presentation",
+  "width": 1280,
+  "height": 720,
+  "updatedAt": "2026-11-18T03:23:54.815Z",
+  "pages": [
+    {
+      "id": "page-55e707be-c843-4661-aefa-50dc020c9bbe",
+      "name": "Slide 1",
+      "background": "#ffffff",
+      "elements": []
+    }
+  ]
+}

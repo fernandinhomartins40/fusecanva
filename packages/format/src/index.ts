@@ -1,0 +1,12 @@
+// @fuse/format: formato aberto .fuse (schemas Zod, JSON Schema, migrações e (de)serialização).
+export * from './schema/primitives.js'
+export * from './schema/nodes.js'
+export * from './schema/content.js'
+export * from './schema/file.js'
+export * from './sheet-refs.js'
+export * from './migrate.js'
+export * from './package.js'
+export * from './json-schema.js'
+export * from './legacy/types.js'
+export { fromLegacy, fromLegacyAsset, LEGACY_EXTENSION, LIBRARY_EXTENSION, LEGACY_UNKNOWN_PLUGIN, type FromLegacyOptions } from './legacy/from-legacy.js'
+export { toLegacy, toLegacyWithReport, toLegacyAsset, type ToLegacyResult, type ToLegacyWarning } from './legacy/to-legacy.js'

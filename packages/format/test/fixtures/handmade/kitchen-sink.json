@@ -1,0 +1,77 @@
+{
+  "id": "design-kitchen-sink",
+  "name": "Todos os recursos",
+  "type": "whiteboard",
+  "archivedAt": "2026-10-01T10:00:00.000Z",
+  "folderId": "folder-1",
+  "width": 3200,
+  "height": 2000,
+  "docPageSetup": { "preset": "a4", "margins": { "top": 72, "right": 60, "bottom": 72, "left": 60 } },
+  "videoDurationMs": 12000,
+  "updatedAt": "2026-11-01T09:30:00.000Z",
+  "brandKitId": "brand-kit-1",
+  "legacyClientFlag": { "nested": [1, 2, 3] },
+  "pages": [
+    {
+      "id": "page-board",
+      "name": "Quadro 1",
+      "background": "#fafafa",
+      "hidden": false,
+      "presenterNotes": "Falar sobre o fluxo.",
+      "elements": [
+        { "id": "text-1", "type": "text", "name": "Título", "x": 10, "y": 20, "width": 400, "height": 80, "rotation": 5, "startMs": 0, "durationMs": 3000, "text": "Olá, mundo", "href": "https://example.org", "fontSize": 32, "fontFamily": "Inter", "color": "#111111", "bold": true, "kerning": -0.5, "lineSpacing": 1.4 },
+        { "id": "line-1", "type": "shape", "name": "Linha", "x": 0, "y": 300, "width": 500, "height": 20, "rotation": 0, "shape": "line", "fill": "#333333", "cornerRadius": 0, "strokeWidth": 4, "startArrow": false, "endArrow": true, "curveOffset": null },
+        { "id": "curve-1", "type": "shape", "name": "Curva", "x": 0, "y": 360, "width": 500, "height": 20, "rotation": 0, "shape": "arrow", "fill": "#333333", "cornerRadius": 0, "curveOffset": 42.5 },
+        { "id": "qr-1", "type": "shape", "name": "QR", "x": 600, "y": 20, "width": 200, "height": 200, "rotation": 0, "shape": "rect", "fill": "#ffffff", "cornerRadius": 8, "qrConfig": { "pattern": "rounded", "url": "https://example.org/qr", "name": "Meu QR", "expiration": "2027-01-01", "foreground": "#000000", "background": "#ffffff", "logo": "logo", "corner": 12 } },
+        { "id": "image-1", "type": "image", "name": "Foto", "x": 50, "y": 500, "width": 320, "height": 240, "rotation": 0, "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==", "altText": "Pixel", "decorative": false, "assetId": "asset-1", "sourceWidth": 1, "sourceHeight": 1, "crop": { "x": 0, "y": 0, "width": 1, "height": 1 }, "opacity": 0.8, "flipX": true, "flipY": false, "brightness": 10, "contrast": -5, "saturation": 20, "filterPreset": "vintage", "imageStylePreset": "gravura", "maskStrokes": [{ "mode": "erase", "size": 12, "points": [0.1, 0.1, 0.5, 0.5] }], "animation": { "effect": "elevation", "phase": "enter", "speed": "fast", "direction": "up" } },
+        { "id": "image-2", "type": "image", "name": "Remota", "x": 400, "y": 500, "width": 100, "height": 100, "rotation": 0, "src": "https://example.org/a.png", "crop": null, "animation": null },
+        { "id": "sticky-1", "type": "sticky-note", "name": "Nota adesiva", "x": 900, "y": 100, "width": 260, "height": 220, "rotation": -3, "text": "Ideia", "fill": "#fff2a8", "color": "#302d20", "fontSize": 24 },
+        { "id": "stroke-1", "type": "free-draw", "name": "Desenho livre", "x": 900, "y": 400, "width": 100, "height": 50, "rotation": 0, "points": [0, 0, 50, 25, 100, 50], "color": "#29263d", "strokeWidth": 8, "opacity": 0.5 },
+        { "id": "mystery-1", "type": "mystery-widget", "name": "Desconhecido", "x": 1, "y": 2, "width": 3, "height": 4, "rotation": 0, "payload": { "a": 1 } }
+      ],
+      "connectors": [
+        { "id": "conn-1", "fromId": "sticky-1", "toId": "text-1", "fromAnchor": { "x": 0, "y": 0.5 }, "toAnchor": { "x": 1, "y": 0.5 }, "color": "#555555", "strokeWidth": 2 },
+        { "id": "conn-2", "fromId": "qr-1", "toId": "image-1", "color": "#555555", "strokeWidth": 3, "curved": true }
+      ],
+      "groups": [
+        { "id": "group-loose", "name": "Separados", "elementIds": ["text-1", "image-1"] },
+        { "id": "group-nested", "name": "Nota e traço", "elementIds": ["sticky-1", "stroke-1"] }
+      ]
+    },
+    {
+      "id": "page-scene",
+      "name": "Cena 1",
+      "background": "#000000",
+      "elements": [],
+      "connectors": [],
+      "groups": [],
+      "timelineClips": [
+        { "id": "clip-1", "assetId": "asset-video", "name": "Abertura", "kind": "video", "trackIndex": 1, "opacity": 90, "fitMode": "cover", "scale": 110, "offsetX": -5, "offsetY": 5, "opacityKeyframes": [{ "timeMs": 0, "opacity": 0 }, { "timeMs": 500, "opacity": 100, "easing": "ease-out" }], "transformKeyframes": [{ "timeMs": 0, "scale": 100, "offsetX": 0, "offsetY": 0, "easing": "ease-in" }], "animationEasing": "ease-in-out", "startMs": 0, "durationMs": 5000, "sourceDurationMs": 8000, "sourceStartMs": 1000, "volume": 0.7, "fadeInMs": 200, "fadeOutMs": 300 },
+        { "id": "clip-2", "assetId": "asset-audio", "name": "Trilha", "kind": "audio", "startMs": 0, "durationMs": 12000, "sourceDurationMs": 60000, "sourceStartMs": 0, "volume": 1, "clientHint": "x" }
+      ]
+    },
+    {
+      "id": "page-doc",
+      "name": "Texto",
+      "background": "#ffffff",
+      "elements": [],
+      "blocks": [
+        { "id": "block-1", "type": "heading", "text": "Relatório" },
+        { "id": "block-2", "type": "paragraph", "text": "Negrito e itálico.", "marks": [{ "start": 0, "end": 7, "bold": true }, { "start": 10, "end": 17, "italic": true, "underline": true, "strike": false }] },
+        { "id": "block-3", "type": "image", "text": "", "image": { "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==", "alt": "Pixel", "width": 100, "height": 100 } },
+        { "id": "block-4", "type": "table", "text": "", "cells": [["A", "B"], ["1", "2"]], "cellImages": { "1:1": [{ "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==", "alt": "", "width": 10, "height": 10 }] }, "merges": [{ "row": 0, "column": 0, "colSpan": 2 }], "cellPadding": 6, "tableSpacing": 2, "borderColor": "#cccccc", "borderWidth": 1, "cellBorders": { "0:0": { "top": { "style": "dashes", "width": 2 }, "left": { "style": "none", "width": 0 } } } },
+        { "id": "block-5", "type": "quote", "text": "Citação", "customAttr": "x" }
+      ]
+    },
+    {
+      "id": "page-sheet",
+      "name": "Planilha 1",
+      "background": "#ffffff",
+      "elements": [],
+      "cells": [["Mês", "Vendas", ""], ["Jan", "10"], ["Fev", "=B2*2", ""], ["", "", ""]],
+      "cellMerges": [{ "row": 0, "column": 0, "colSpan": 2, "rowSpan": 1 }],
+      "cellFormats": { "1:1": "currency", "5:7": "percentage", "bogus": "date" },
+      "charts": [{ "id": "chart-1", "type": "bar", "title": "Vendas", "range": { "startRow": 0, "startColumn": 0, "endRow": 2, "endColumn": 1 } }]
+    }
+  ]
+}

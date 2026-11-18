@@ -1,0 +1,63 @@
+# Roteiros de navegador (CDP) em shards. Manual ate a migracao para Playwright (A1-QA).
+# Cada roteiro "test:browser:*" de @fuse/web sobe o proprio Vite e um Chrome headless.
+name: E2E
+
+on:
+  workflow_dispatch:
+    inputs:
+      filter:
+        description: "Regex opcional para filtrar nomes de roteiros (ex.: editor|sheet)"
+        required: false
+        default: ""
+  schedule:
+    - cron: "0 5 * * 1"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: e2e-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NODE_VERSION: "22"
+  TURBO_TELEMETRY_DISABLED: "1"
+  SHARD_TOTAL: "4"
+
+jobs:
+  browser:
+    name: Roteiros de navegador (shard ${{ matrix.shard }}/4)
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2, 3, 4]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
+      - name: Instalar dependencias
+        run: pnpm install --frozen-lockfile
+      - name: Localizar Chrome
+        run: echo "CHROME_PATH=$(command -v google-chrome || command -v chromium)" >> "$GITHUB_ENV"
+      - name: Build das dependencias do web
+        run: pnpm turbo run build --filter=@fuse/web^...
+      - name: Executar roteiros do shard
+        env:
+          SHARD_INDEX: ${{ matrix.shard }}
+          FILTER: ${{ github.event.inputs.filter }}
+        run: node .github/scripts/run-browser-shard.mjs
+      - name: Publicar artefatos de falha
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: e2e-shard-${{ matrix.shard }}
+          path: |
+            apps/web/artifacts/**
+            apps/web/test-results/**
+          if-no-files-found: ignore
+          retention-days: 7

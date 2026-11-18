@@ -1,0 +1,65 @@
+# CI principal: higiene, encoding, lint, typecheck, testes unitarios e build (Turborepo).
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NODE_VERSION: "22"
+  TURBO_TELEMETRY_DISABLED: "1"
+  FORCE_COLOR: "1"
+
+jobs:
+  hygiene:
+    name: Higiene e encoding
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: Higiene do repositorio (tamanho e segredos)
+        run: node scripts/repo-hygiene/check.mjs
+      - name: Encoding UTF-8 (mojibake)
+        run: node scripts/check-encoding.mjs
+
+  verify:
+    name: Lint, typecheck, testes e build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    needs: hygiene
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
+      - name: Cache local do Turborepo
+        uses: actions/cache@v4
+        with:
+          path: .turbo/cache
+          key: turbo-${{ runner.os }}-${{ github.sha }}
+          restore-keys: |
+            turbo-${{ runner.os }}-
+      - name: Instalar dependencias
+        run: pnpm install --frozen-lockfile
+      - name: Lint (turbo + fronteiras)
+        run: pnpm lint
+      - name: Typecheck
+        run: pnpm typecheck
+      - name: Testes unitarios
+        run: pnpm test
+      - name: Build
+        run: pnpm build

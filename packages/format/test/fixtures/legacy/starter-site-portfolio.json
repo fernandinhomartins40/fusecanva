@@ -1,0 +1,98 @@
+{
+  "id": "design-36e025dc-66ba-4dda-ab38-a032faca13f6",
+  "name": "Portfólio online",
+  "type": "site",
+  "width": 1440,
+  "height": 900,
+  "updatedAt": "2026-11-18T03:23:54.811Z",
+  "pages": [
+    {
+      "id": "page-a1fc3fcf-edda-4f78-8f75-d7383498f6fe",
+      "name": "Início",
+      "background": "#f4f1ec",
+      "elements": [
+        {
+          "id": "shape-bd522658-f398-4b06-ac3c-0b2e122c0e76",
+          "type": "shape",
+          "shape": "rect",
+          "name": "Cabeçalho verde",
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 360,
+          "rotation": 0,
+          "fill": "#29483f",
+          "cornerRadius": 0
+        },
+        {
+          "id": "text-2a84b4c4-3111-48f8-b787-942a6845d225",
+          "type": "text",
+          "name": "Nome",
+          "text": "Seu nome criativo",
+          "x": 96,
+          "y": 96,
+          "width": 860,
+          "height": 120,
+          "rotation": 0,
+          "fontSize": 64,
+          "fontFamily": "Arial",
+          "color": "#ffffff",
+          "bold": true
+        },
+        {
+          "id": "text-d1b9349f-50e3-4c26-8732-7ff35c295007",
+          "type": "text",
+          "name": "Especialidade",
+          "text": "Design · estratégia · direção de arte",
+          "x": 104,
+          "y": 236,
+          "width": 860,
+          "height": 52,
+          "rotation": 0,
+          "fontSize": 26,
+          "fontFamily": "Arial",
+          "color": "#d4e5d9",
+          "bold": false
+        },
+        {
+          "id": "text-bd317019-f953-416d-b86b-8e0b4df5014e",
+          "type": "text",
+          "name": "Chamada para ação",
+          "text": "Conheça meu trabalho",
+          "x": 106,
+          "y": 560,
+          "width": 620,
+          "height": 72,
+          "rotation": 0,
+          "fontSize": 40,
+          "fontFamily": "Arial",
+          "color": "#29483f",
+          "bold": true,
+          "href": "#site-section-page-750249a0-802c-4985-a80c-a566537a2fea"
+        }
+      ]
+    },
+    {
+      "id": "page-750249a0-802c-4985-a80c-a566537a2fea",
+      "name": "Contato",
+      "background": "#ffffff",
+      "elements": [
+        {
+          "id": "text-3a19e3a8-e062-4286-a403-9b59b9ee8d71",
+          "type": "text",
+          "name": "Contato",
+          "text": "Vamos criar algo juntos?\nola@exemplo.com",
+          "x": 100,
+          "y": 220,
+          "width": 980,
+          "height": 180,
+          "rotation": 0,
+          "fontSize": 44,
+          "fontFamily": "Arial",
+          "color": "#29483f",
+          "bold": true
+        }
+      ]
+    }
+  ]
+}

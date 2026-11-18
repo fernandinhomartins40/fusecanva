@@ -1,0 +1,16 @@
+# Allowlist: o contexto e a raiz do repositorio (que inclui material de pesquisa local de varios GB).
+# Tudo e ignorado, exceto o necessario para o build do web.
+*
+!package.json
+!pnpm-lock.yaml
+!pnpm-workspace.yaml
+!tsconfig.base.json
+!apps/web/
+!infra/docker/nginx/
+apps/web/node_modules/
+apps/web/dist/
+apps/web/artifacts/
+apps/web/.data/
+apps/web/.env
+apps/web/.env.*
+!apps/web/.env.example

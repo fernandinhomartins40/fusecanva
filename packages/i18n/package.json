@@ -1,0 +1,32 @@
+{
+  "name": "@fuse/i18n",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Catalogos de mensagens PT-BR e EN.",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc -b --noEmit && tsc -p tsconfig.test.json",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@formatjs/icu-messageformat-parser": "^3.5.23",
+    "@types/node": "^22.20.5",
+    "typescript": "~6.0.3",
+    "vitest": "5.1.0"
+  },
+  "dependencies": {
+    "@formatjs/intl": "^6.1.6",
+    "intl-messageformat": "^12.2.0"
+  }
+}

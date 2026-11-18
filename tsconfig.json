@@ -1,0 +1,89 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "packages/format"
+    },
+    {
+      "path": "packages/collab"
+    },
+    {
+      "path": "packages/geometry"
+    },
+    {
+      "path": "packages/text"
+    },
+    {
+      "path": "packages/renderer"
+    },
+    {
+      "path": "packages/editor-core"
+    },
+    {
+      "path": "packages/ui"
+    },
+    {
+      "path": "packages/editor-design"
+    },
+    {
+      "path": "packages/editor-doc"
+    },
+    {
+      "path": "packages/editor-sheet"
+    },
+    {
+      "path": "packages/formula"
+    },
+    {
+      "path": "packages/editor-whiteboard"
+    },
+    {
+      "path": "packages/editor-video"
+    },
+    {
+      "path": "packages/editor-site"
+    },
+    {
+      "path": "packages/image-ops"
+    },
+    {
+      "path": "packages/io-office"
+    },
+    {
+      "path": "packages/io-export"
+    },
+    {
+      "path": "packages/brand"
+    },
+    {
+      "path": "packages/bulk"
+    },
+    {
+      "path": "packages/ai-client"
+    },
+    {
+      "path": "packages/sdk"
+    },
+    {
+      "path": "packages/api-client"
+    },
+    {
+      "path": "packages/authz"
+    },
+    {
+      "path": "packages/i18n"
+    },
+    {
+      "path": "packages/test-kit"
+    },
+    {
+      "path": "apps/worker"
+    },
+    {
+      "path": "apps/cli"
+    },
+    {
+      "path": "apps/docs-site"
+    }
+  ]
+}

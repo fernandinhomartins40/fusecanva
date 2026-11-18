@@ -1,0 +1,116 @@
+{
+  "id": "design-fdacb069-79c1-4de5-8323-df3324f6e401",
+  "name": "Banner panorama",
+  "type": "design",
+  "width": 1600,
+  "height": 600,
+  "updatedAt": "2026-11-18T03:23:54.806Z",
+  "pages": [
+    {
+      "id": "page-4bc07cd6-a7d2-41d5-b0fb-16900c619f29",
+      "name": "Página 1",
+      "background": "#122a31",
+      "elements": [
+        {
+          "id": "shape-1fb040fe-ee76-4d30-ba50-0beb8646baee",
+          "type": "shape",
+          "shape": "rect",
+          "name": "Faixa marfim",
+          "x": 0,
+          "y": 0,
+          "width": 880,
+          "height": 600,
+          "rotation": 0,
+          "fill": "#f4eee4",
+          "cornerRadius": 0
+        },
+        {
+          "id": "shape-efe167cf-76a2-4c4e-a42f-8cc8590153b1",
+          "type": "shape",
+          "shape": "ellipse",
+          "name": "Círculo verde",
+          "x": 1060,
+          "y": 92,
+          "width": 410,
+          "height": 410,
+          "rotation": 0,
+          "fill": "#65a69a",
+          "cornerRadius": 0
+        },
+        {
+          "id": "shape-ab32239e-0159-4b22-b144-b7916a163965",
+          "type": "shape",
+          "shape": "ellipse",
+          "name": "Ponto coral",
+          "x": 1190,
+          "y": 210,
+          "width": 150,
+          "height": 150,
+          "rotation": 0,
+          "fill": "#ed8069",
+          "cornerRadius": 0
+        },
+        {
+          "id": "text-e662624d-75eb-4bdd-8007-d97c4a721df4",
+          "type": "text",
+          "name": "Selo",
+          "text": "EDIÇÃO ESPECIAL",
+          "x": 74,
+          "y": 58,
+          "width": 650,
+          "height": 45,
+          "rotation": 0,
+          "fontSize": 21,
+          "fontFamily": "Arial",
+          "color": "#547e74",
+          "bold": true
+        },
+        {
+          "id": "text-a829f942-8fb1-4a80-b31d-dd567332c28f",
+          "type": "text",
+          "name": "Título",
+          "text": "Novas ideias\ncomeçam aqui",
+          "x": 74,
+          "y": 150,
+          "width": 820,
+          "height": 190,
+          "rotation": 0,
+          "fontSize": 54,
+          "fontFamily": "Arial",
+          "color": "#122a31",
+          "bold": true
+        },
+        {
+          "id": "text-b993dc7a-3f8c-4de9-8089-f6f422b64eb4",
+          "type": "text",
+          "name": "Descrição",
+          "text": "Inspire seu próximo projeto com a gente.",
+          "x": 82,
+          "y": 390,
+          "width": 680,
+          "height": 60,
+          "rotation": 0,
+          "fontSize": 24,
+          "fontFamily": "Arial",
+          "color": "#435b5a",
+          "bold": false
+        },
+        {
+          "id": "text-4ff1895c-dc25-4769-9869-e79e0c639406",
+          "type": "text",
+          "name": "Ação",
+          "text": "EXPLORAR  →",
+          "x": 850,
+          "y": 474,
+          "width": 570,
+          "height": 50,
+          "rotation": 0,
+          "fontSize": 24,
+          "fontFamily": "Arial",
+          "color": "#ffffff",
+          "bold": true
+        }
+      ]
+    }
+  ]
+}

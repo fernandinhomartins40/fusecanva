@@ -1,0 +1,17 @@
+{
+  "id": "design-844830f4-7008-4731-b1ed-f098f7cd0b25",
+  "name": "Vídeo sem título",
+  "type": "video",
+  "width": 1920,
+  "height": 1080,
+  "updatedAt": "2026-11-18T03:23:54.816Z",
+  "pages": [
+    {
+      "id": "page-f589bba3-25fa-418f-ad9d-38994315e001",
+      "name": "Cena 1",
+      "background": "#ffffff",
+      "elements": []
+    }
+  ],
+  "videoDurationMs": 10000
+}

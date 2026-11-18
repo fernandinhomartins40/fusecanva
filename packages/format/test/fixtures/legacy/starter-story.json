@@ -1,0 +1,103 @@
+{
+  "id": "design-97d6efa7-a1fc-40fb-bf7d-c76a7fd86552",
+  "name": "Story em movimento",
+  "type": "design",
+  "width": 1080,
+  "height": 1920,
+  "updatedAt": "2026-11-18T03:23:54.806Z",
+  "pages": [
+    {
+      "id": "page-45df08c5-27b9-4de3-a0d9-479136949a20",
+      "name": "Página 1",
+      "background": "#ede7f7",
+      "elements": [
+        {
+          "id": "shape-c7388384-2bbc-4c16-a2b1-7d926f1ff1dc",
+          "type": "shape",
+          "shape": "rect",
+          "name": "Fundo ameixa",
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1050,
+          "rotation": 0,
+          "fill": "#53324e",
+          "cornerRadius": 0
+        },
+        {
+          "id": "shape-a2db075a-c974-4291-9c87-de54c554684f",
+          "type": "shape",
+          "shape": "ellipse",
+          "name": "Sol coral",
+          "x": 115,
+          "y": 1110,
+          "width": 850,
+          "height": 650,
+          "rotation": 0,
+          "fill": "#ee806c",
+          "cornerRadius": 0
+        },
+        {
+          "id": "text-b3e7f05f-6be1-4ada-a782-1fbcdbc0e2a1",
+          "type": "text",
+          "name": "Marca",
+          "text": "NOVIDADE",
+          "x": 84,
+          "y": 92,
+          "width": 820,
+          "height": 50,
+          "rotation": 0,
+          "fontSize": 26,
+          "fontFamily": "Arial",
+          "color": "#d8c9f3",
+          "bold": true
+        },
+        {
+          "id": "text-a04dc65e-215a-4e48-8048-5d9ec491d70f",
+          "type": "text",
+          "name": "Mensagem",
+          "text": "Uma nova\nforma de criar",
+          "x": 84,
+          "y": 350,
+          "width": 850,
+          "height": 360,
+          "rotation": 0,
+          "fontSize": 88,
+          "fontFamily": "Arial",
+          "color": "#ffffff",
+          "bold": true
+        },
+        {
+          "id": "text-d7f1e586-4ec8-4a9e-96ee-cfe7d579bd38",
+          "type": "text",
+          "name": "Detalhes",
+          "text": "Conheça ideias e ferramentas para o próximo projeto.",
+          "x": 92,
+          "y": 790,
+          "width": 770,
+          "height": 120,
+          "rotation": 0,
+          "fontSize": 34,
+          "fontFamily": "Arial",
+          "color": "#f1eafa",
+          "bold": false
+        },
+        {
+          "id": "text-26118b54-7758-4fac-b4a4-adf7bfe6d05e",
+          "type": "text",
+          "name": "Ação",
+          "text": "DESLIZE PARA DESCOBRIR  →",
+          "x": 100,
+          "y": 1690,
+          "width": 850,
+          "height": 60,
+          "rotation": 0,
+          "fontSize": 26,
+          "fontFamily": "Arial",
+          "color": "#53324e",
+          "bold": true
+        }
+      ]
+    }
+  ]
+}

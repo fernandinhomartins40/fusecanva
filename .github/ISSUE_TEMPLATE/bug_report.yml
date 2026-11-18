@@ -1,0 +1,57 @@
+name: Relatar bug
+description: Algo nao funciona como esperado.
+labels: ["bug", "triagem"]
+body:
+  - type: markdown
+    attributes:
+      value: Obrigado por relatar. Verifique se ja nao existe uma issue igual.
+  - type: textarea
+    id: descricao
+    attributes:
+      label: O que aconteceu
+      description: Descreva o problema e o comportamento esperado.
+    validations:
+      required: true
+  - type: textarea
+    id: passos
+    attributes:
+      label: Passos para reproduzir
+      placeholder: |
+        1. Abrir um design novo
+        2. ...
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Design
+        - Documento
+        - Planilha
+        - Quadro branco
+        - Video
+        - Site
+        - Exportacao
+        - Colaboracao
+        - IA
+        - Servidor / auto-hospedagem
+        - CLI
+        - Outro
+    validations:
+      required: true
+  - type: input
+    id: versao
+    attributes:
+      label: Versao ou commit
+  - type: input
+    id: ambiente
+    attributes:
+      label: Navegador e sistema operacional
+      placeholder: Firefox 140, Ubuntu 24.04
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs ou arquivo .fuse minimo
+      description: Remova dados pessoais e segredos antes de colar.
+      render: text

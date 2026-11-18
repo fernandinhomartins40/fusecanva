@@ -1,0 +1,103 @@
+{
+  "id": "design-5b8c06fb-fa9a-471b-bb6c-04bd7b042251",
+  "name": "Campanha noturna",
+  "type": "design",
+  "width": 794,
+  "height": 1123,
+  "updatedAt": "2026-11-18T03:23:54.798Z",
+  "pages": [
+    {
+      "id": "page-73f88b76-d817-4884-b226-5dce3ed39fbd",
+      "name": "Página 1",
+      "background": "#20203b",
+      "elements": [
+        {
+          "id": "shape-5152ff1f-ec73-46b2-9d33-dadcb8d185a0",
+          "type": "shape",
+          "shape": "rect",
+          "name": "Faixa violeta",
+          "x": 0,
+          "y": 0,
+          "width": 794,
+          "height": 350,
+          "rotation": 0,
+          "fill": "#6f5cdf",
+          "cornerRadius": 0
+        },
+        {
+          "id": "shape-e4c29edb-1d97-4f51-adcc-ea0c9aac8668",
+          "type": "shape",
+          "shape": "ellipse",
+          "name": "Selo coral",
+          "x": 540,
+          "y": 600,
+          "width": 180,
+          "height": 180,
+          "rotation": 0,
+          "fill": "#ff896f",
+          "cornerRadius": 0
+        },
+        {
+          "id": "text-ce5de135-467c-4af1-83bc-40b2b0e5da7c",
+          "type": "text",
+          "name": "Chamada",
+          "text": "NOVO\nCAPÍTULO",
+          "x": 68,
+          "y": 98,
+          "width": 640,
+          "height": 210,
+          "rotation": 0,
+          "fontSize": 68,
+          "fontFamily": "Arial",
+          "color": "#ffffff",
+          "bold": true
+        },
+        {
+          "id": "text-96349b59-772f-4268-883f-f18a0f8772a3",
+          "type": "text",
+          "name": "Descrição",
+          "text": "Uma campanha começa com uma boa história.",
+          "x": 74,
+          "y": 385,
+          "width": 590,
+          "height": 78,
+          "rotation": 0,
+          "fontSize": 24,
+          "fontFamily": "Arial",
+          "color": "#eeeaff",
+          "bold": false
+        },
+        {
+          "id": "text-3f8e34b3-d4d5-40df-b4b5-b9de517db586",
+          "type": "text",
+          "name": "Ação",
+          "text": "DESCUBRA MAIS  →",
+          "x": 76,
+          "y": 520,
+          "width": 440,
+          "height": 50,
+          "rotation": 0,
+          "fontSize": 18,
+          "fontFamily": "Arial",
+          "color": "#ffffff",
+          "bold": true
+        },
+        {
+          "id": "text-a83c6bfa-6f66-42ef-86ac-627b8513bc03",
+          "type": "text",
+          "name": "Selo",
+          "text": "2026",
+          "x": 565,
+          "y": 657,
+          "width": 140,
+          "height": 52,
+          "rotation": 0,
+          "fontSize": 24,
+          "fontFamily": "Arial",
+          "color": "#29263d",
+          "bold": true
+        }
+      ]
+    }
+  ]
+}

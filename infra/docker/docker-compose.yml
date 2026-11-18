@@ -1,0 +1,179 @@
+# Fuse Studio - stack de desenvolvimento local.
+#
+# Uso (a partir da raiz do repositorio):
+#   cp .env.example .env
+#   docker compose -f infra/docker/docker-compose.yml --env-file .env up -d --wait
+#
+# Servicos de infraestrutura (sobem por padrao): postgres, minio (+ minio-init), redis, mailpit.
+# Aplicacao conteinerizada (perfil "app"): api e web.
+#   docker compose -f infra/docker/docker-compose.yml --env-file .env --profile app up -d --build --wait
+#
+# Todas as portas publicadas escutam apenas em 127.0.0.1. Credenciais padrao sao SO para dev.
+
+name: fuse-studio
+
+x-healthcheck-defaults: &healthcheck-defaults
+  interval: 5s
+  timeout: 5s
+  retries: 20
+  start_period: 10s
+
+services:
+  postgres:
+    image: ${POSTGRES_IMAGE:-postgres:17-alpine}
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-fuse}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-fuse-dev-password}
+      POSTGRES_DB: ${POSTGRES_DB:-fuse}
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "127.0.0.1:${POSTGRES_HOST_PORT:-5432}:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      <<: *healthcheck-defaults
+      test: ["CMD-SHELL", "pg_isready -U \"$${POSTGRES_USER}\" -d \"$${POSTGRES_DB}\" -h 127.0.0.1"]
+
+  minio:
+    # A MinIO deixou de publicar imagens novas da edicao comunitaria em 2025; fixamos a ultima
+    # tag estavel conhecida. Qualquer servico S3-compativel (Garage, SeaweedFS, Ceph RGW) serve.
+    image: ${MINIO_IMAGE:-minio/minio:RELEASE.2025-04-22T22-12-26Z}
+    restart: unless-stopped
+    command: ["server", "/data", "--console-address", ":9001"]
+    environment:
+      MINIO_ROOT_USER: ${S3_ACCESS_KEY_ID:-fuse-dev}
+      MINIO_ROOT_PASSWORD: ${S3_SECRET_ACCESS_KEY:-fuse-dev-secret}
+    ports:
+      - "127.0.0.1:${MINIO_API_HOST_PORT:-9000}:9000"
+      - "127.0.0.1:${MINIO_CONSOLE_HOST_PORT:-9001}:9001"
+    volumes:
+      - minio-data:/data
+    healthcheck:
+      <<: *healthcheck-defaults
+      test: ["CMD", "mc", "ready", "local"]
+
+  # Job de uma execucao: cria o bucket de midia (idempotente) e sai com codigo 0.
+  minio-init:
+    image: ${MINIO_MC_IMAGE:-minio/mc:RELEASE.2025-04-16T18-13-26Z}
+    restart: "no"
+    depends_on:
+      minio:
+        condition: service_healthy
+    environment:
+      S3_ACCESS_KEY_ID: ${S3_ACCESS_KEY_ID:-fuse-dev}
+      S3_SECRET_ACCESS_KEY: ${S3_SECRET_ACCESS_KEY:-fuse-dev-secret}
+      S3_BUCKET: ${S3_BUCKET:-fuse-media}
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        set -e
+        mc alias set local http://minio:9000 "$${S3_ACCESS_KEY_ID}" "$${S3_SECRET_ACCESS_KEY}"
+        mc mb --ignore-existing "local/$${S3_BUCKET}"
+        mc anonymous set none "local/$${S3_BUCKET}"
+        echo "bucket $${S3_BUCKET} pronto"
+
+  redis:
+    image: ${REDIS_IMAGE:-redis:8.2-alpine}
+    restart: unless-stopped
+    # AOF ligado para que filas BullMQ sobrevivam a reinicios; noeviction e exigido pelo BullMQ.
+    command: ["redis-server", "--appendonly", "yes", "--maxmemory-policy", "noeviction"]
+    ports:
+      - "127.0.0.1:${REDIS_HOST_PORT:-6379}:6379"
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      <<: *healthcheck-defaults
+      test: ["CMD", "redis-cli", "ping"]
+
+  mailpit:
+    image: ${MAILPIT_IMAGE:-axllent/mailpit:v1.27}
+    restart: unless-stopped
+    environment:
+      MP_DATABASE: /data/mailpit.db
+      MP_SMTP_AUTH_ACCEPT_ANY: "1"
+      MP_SMTP_AUTH_ALLOW_INSECURE: "1"
+      MP_MAX_MESSAGES: "5000"
+    ports:
+      - "127.0.0.1:${MAILPIT_SMTP_HOST_PORT:-1025}:1025"
+      - "127.0.0.1:${MAILPIT_UI_HOST_PORT:-8025}:8025"
+    volumes:
+      - mailpit-data:/data
+    healthcheck:
+      <<: *healthcheck-defaults
+      test: ["CMD", "/mailpit", "readyz"]
+
+  # ---------------------------------------------------------------- perfil "app"
+  api:
+    profiles: ["app"]
+    build:
+      context: ../..
+      dockerfile: infra/docker/api.Dockerfile
+    image: fuse-studio/api:dev
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      mailpit:
+        condition: service_healthy
+      minio-init:
+        condition: service_completed_successfully
+    environment:
+      NODE_ENV: production
+      PORT: "8787"
+      STUDIO_API_HOST: 0.0.0.0
+      STUDIO_DB_PATH: /data/studio.sqlite
+      STUDIO_MEDIA_OBJECT_DIR: /data/media
+      APP_ORIGINS: ${APP_ORIGINS:-http://127.0.0.1:5173,http://localhost:5173,http://127.0.0.1:8080,http://localhost:8080}
+      STUDIO_PUBLIC_APP_URL: ${STUDIO_PUBLIC_APP_URL:-http://localhost:8080}
+      STUDIO_AI_MODE: ${STUDIO_AI_MODE:-disabled}
+      STUDIO_AI_BASE_URL: ${STUDIO_AI_BASE_URL:-}
+      STUDIO_AI_API_KEY: ${STUDIO_AI_API_KEY:-}
+      STUDIO_AI_MODEL: ${STUDIO_AI_MODEL:-}
+      STUDIO_IMAGE_AI_MODE: ${STUDIO_IMAGE_AI_MODE:-sandbox}
+      STUDIO_IMAGE_AI_BASE_URL: ${STUDIO_IMAGE_AI_BASE_URL:-}
+      STUDIO_IMAGE_AI_API_KEY: ${STUDIO_IMAGE_AI_API_KEY:-}
+      STUDIO_IMAGE_AI_MODEL: ${STUDIO_IMAGE_AI_MODEL:-}
+      # Servicos da v2 (consumidos a partir da onda 1; o servidor atual ainda usa SQLite + disco).
+      DATABASE_URL: postgres://${POSTGRES_USER:-fuse}:${POSTGRES_PASSWORD:-fuse-dev-password}@postgres:5432/${POSTGRES_DB:-fuse}
+      REDIS_URL: redis://redis:6379/0
+      S3_ENDPOINT: http://minio:9000
+      S3_REGION: ${S3_REGION:-us-east-1}
+      S3_BUCKET: ${S3_BUCKET:-fuse-media}
+      S3_ACCESS_KEY_ID: ${S3_ACCESS_KEY_ID:-fuse-dev}
+      S3_SECRET_ACCESS_KEY: ${S3_SECRET_ACCESS_KEY:-fuse-dev-secret}
+      S3_FORCE_PATH_STYLE: "true"
+      SMTP_URL: smtp://mailpit:1025
+      SMTP_FROM: ${SMTP_FROM:-Fuse Studio <no-reply@fuse.localhost>}
+    ports:
+      - "127.0.0.1:${API_HOST_PORT:-8787}:8787"
+    volumes:
+      - api-data:/data
+    healthcheck:
+      <<: *healthcheck-defaults
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:8787/api/health').then(r=>process.exit(r.ok?0:1),()=>process.exit(1))"]
+
+  web:
+    profiles: ["app"]
+    build:
+      context: ../..
+      dockerfile: infra/docker/web.Dockerfile
+    image: fuse-studio/web:dev
+    restart: unless-stopped
+    depends_on:
+      api:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:${WEB_HOST_PORT:-8080}:8080"
+    healthcheck:
+      <<: *healthcheck-defaults
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:8080/healthz"]
+
+volumes:
+  postgres-data:
+  minio-data:
+  redis-data:
+  mailpit-data:
+  api-data:

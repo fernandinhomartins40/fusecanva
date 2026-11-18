@@ -1,0 +1,14 @@
+.dream-lab { display: grid; gap: 14px; padding: 18px; border: 1px solid #e8e5ef; border-radius: 12px; background: #fff; color: #29263d; }
+.dream-lab > header, .dream-lab-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.dream-lab > header h2 { margin: 0; font-size: 19px; }
+.dream-lab > header span, .dream-lab-result small { color: #686477; font-size: 12px; }
+.dream-lab form, .dream-lab-result { display: grid; gap: 10px; }
+.dream-lab label { font-size: 13px; font-weight: 600; }
+.dream-lab textarea { min-height: 92px; resize: vertical; padding: 10px; border: 1px solid #d9d5e3; border-radius: 8px; font: inherit; }
+.dream-lab button { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 38px; padding: 7px 12px; border: 1px solid #d9d5e3; border-radius: 8px; background: #fff; color: inherit; font: inherit; cursor: pointer; }
+.dream-lab form > button { background: #7d2ae8; border-color: #7d2ae8; color: white; }
+.dream-lab button:disabled { cursor: wait; opacity: .55; }
+.dream-lab-result > p { margin: 0; color: #686477; font-size: 13px; }
+.dream-lab-result > .dream-lab-result-prompt { padding: 9px 10px; border-left: 3px solid #7d2ae8; border-radius: 4px; color: #39344c; background: #f6f2fc; line-height: 1.5; overflow-wrap: anywhere; }
+.dream-lab-result > img { display: block; width: min(100%, 480px); max-height: 480px; object-fit: contain; justify-self: center; border-radius: 8px; background: #f4f2f8; }
+.dream-lab-result small { line-height: 1.5; }

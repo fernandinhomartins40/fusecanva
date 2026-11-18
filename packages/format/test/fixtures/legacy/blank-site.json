@@ -1,0 +1,129 @@
+{
+  "id": "design-657fda86-fedc-4773-ac50-030c63ada3f9",
+  "name": "Site sem título",
+  "type": "site",
+  "width": 1440,
+  "height": 900,
+  "updatedAt": "2026-11-18T03:23:54.817Z",
+  "pages": [
+    {
+      "id": "page-ec9af9e1-10a3-41fb-bc10-8bfc13a1c022",
+      "name": "Início",
+      "background": "#f5f4fa",
+      "elements": [
+        {
+          "id": "shape-7fc887da-868a-4988-90d0-c6e3ee9923c1",
+          "type": "shape",
+          "name": "Fundo do botão",
+          "x": 120,
+          "y": 475,
+          "width": 260,
+          "height": 76,
+          "rotation": 0,
+          "shape": "rect",
+          "fill": "#7054df",
+          "cornerRadius": 14
+        },
+        {
+          "id": "text-ebd9699e-d573-4617-baca-60a1bc6d2659",
+          "type": "text",
+          "name": "Título principal",
+          "x": 120,
+          "y": 150,
+          "width": 1000,
+          "height": 140,
+          "rotation": 0,
+          "text": "Sua ideia, em destaque",
+          "fontSize": 72,
+          "fontFamily": "Arial",
+          "color": "#26233d",
+          "bold": true
+        },
+        {
+          "id": "text-6ca903b3-0e40-4656-9ff7-1034df2ced94",
+          "type": "text",
+          "name": "Texto de apresentação",
+          "x": 120,
+          "y": 320,
+          "width": 760,
+          "height": 100,
+          "rotation": 0,
+          "text": "Apresente seu trabalho com um site claro, responsivo e fácil de personalizar.",
+          "fontSize": 28,
+          "fontFamily": "Arial",
+          "color": "#635e73",
+          "bold": false
+        },
+        {
+          "id": "text-6ff793aa-d989-496e-81d2-b99685c8d756",
+          "type": "text",
+          "name": "Chamada para ação",
+          "x": 146,
+          "y": 490,
+          "width": 220,
+          "height": 48,
+          "rotation": 0,
+          "text": "Entre em contato",
+          "href": "#site-section-page-dd731289-3b1f-41bb-822a-74d50f88e11a",
+          "fontSize": 24,
+          "fontFamily": "Arial",
+          "color": "#ffffff",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "id": "page-dd731289-3b1f-41bb-822a-74d50f88e11a",
+      "name": "Contato",
+      "background": "#26233d",
+      "elements": [
+        {
+          "id": "text-4df9af9d-65a4-4839-bc6f-e2757de64b5c",
+          "type": "text",
+          "name": "Título de contato",
+          "x": 120,
+          "y": 145,
+          "width": 1000,
+          "height": 130,
+          "rotation": 0,
+          "text": "Vamos conversar?",
+          "fontSize": 68,
+          "fontFamily": "Arial",
+          "color": "#ffffff",
+          "bold": true
+        },
+        {
+          "id": "text-40fa6d2b-07b4-461b-8c02-a58ed1de6ed3",
+          "type": "text",
+          "name": "Mensagem de contato",
+          "x": 120,
+          "y": 315,
+          "width": 760,
+          "height": 100,
+          "rotation": 0,
+          "text": "Conte um pouco sobre a sua ideia e vamos criar algo juntos.",
+          "fontSize": 28,
+          "fontFamily": "Arial",
+          "color": "#e5e2f2",
+          "bold": false
+        },
+        {
+          "id": "text-62083e2e-a700-4541-b08c-b9b456f096fe",
+          "type": "text",
+          "name": "E-mail de contato",
+          "x": 120,
+          "y": 485,
+          "width": 540,
+          "height": 60,
+          "rotation": 0,
+          "text": "contato@example.com",
+          "href": "mailto:contato@example.com",
+          "fontSize": 28,
+          "fontFamily": "Arial",
+          "color": "#ffffff",
+          "bold": true
+        }
+      ]
+    }
+  ]
+}

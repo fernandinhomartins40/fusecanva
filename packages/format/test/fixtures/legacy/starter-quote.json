@@ -1,0 +1,101 @@
+{
+  "id": "design-d66ecb43-446d-4202-9778-344fc1250e81",
+  "name": "Frase em destaque",
+  "type": "design",
+  "width": 794,
+  "height": 1123,
+  "updatedAt": "2026-11-18T03:23:54.806Z",
+  "pages": [
+    {
+      "id": "page-43d3d8f8-07f1-4907-982d-3cdbf572c0bc",
+      "name": "Página 1",
+      "background": "#f3eadc",
+      "elements": [
+        {
+          "id": "shape-d5353e1d-4f18-4374-bc08-fc106c7fce6c",
+          "type": "shape",
+          "shape": "rect",
+          "name": "Cartão escuro",
+          "x": 58,
+          "y": 74,
+          "width": 678,
+          "height": 970,
+          "rotation": 0,
+          "fill": "#273d37",
+          "cornerRadius": 28
+        },
+        {
+          "id": "shape-515fb5eb-f7c4-40c9-8ca3-f549e81044f0",
+          "type": "shape",
+          "shape": "ellipse",
+          "name": "Aspas",
+          "x": 110,
+          "y": 132,
+          "width": 170,
+          "height": 170,
+          "rotation": 0,
+          "fill": "#df9a6d",
+          "cornerRadius": 0
+        },
+        {
+          "id": "text-59b32d83-31de-4c1b-b228-8c7c77b488c9",
+          "type": "text",
+          "name": "Aspa decorativa",
+          "text": "“",
+          "x": 134,
+          "y": 112,
+          "width": 150,
+          "height": 190,
+          "rotation": 0,
+          "fontSize": 140,
+          "fontFamily": "Arial",
+          "color": "#273d37",
+          "bold": true
+        },
+        {
+          "id": "text-fc6133c4-5a76-4285-93b2-70f1bb047c4e",
+          "type": "text",
+          "name": "Citação",
+          "text": "A criatividade\né a inteligência\na divertir-se.",
+          "x": 108,
+          "y": 350,
+          "width": 580,
+          "height": 360,
+          "rotation": 0,
+          "fontSize": 50,
+          "fontFamily": "Arial",
+          "color": "#fff8ec",
+          "bold": true
+        },
+        {
+          "id": "text-e5f5dd66-2f7b-4aa2-8f26-d584a81fe636",
+          "type": "text",
+          "name": "Autoria",
+          "text": "— ALBERT EINSTEIN",
+          "x": 116,
+          "y": 820,
+          "width": 540,
+          "height": 54,
+          "rotation": 0,
+          "fontSize": 20,
+          "fontFamily": "Arial",
+          "color": "#dfb99b",
+          "bold": true
+        },
+        {
+          "id": "shape-496f7a8f-193f-4902-90d2-a46f192355a7",
+          "type": "shape",
+          "shape": "ellipse",
+          "name": "Ponto coral",
+          "x": 590,
+          "y": 880,
+          "width": 88,
+          "height": 88,
+          "rotation": 0,
+          "fill": "#e27e69",
+          "cornerRadius": 0
+        }
+      ]
+    }
+  ]
+}

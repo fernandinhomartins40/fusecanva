@@ -1,0 +1,36 @@
+# Fuse Studio - root .gitignore (owned by A0-01 repo hygiene)
+
+# Research corpus: third-party captures, session dumps, account data.
+# Must never be versioned in the product repository.
+/analysis/
+/visual-references/
+/visual-diff.html
+/rea.cmd
+
+# Generated artifacts and local data
+/web/artifacts/
+**/.data/
+
+# Dependencies and build output
+**/node_modules/
+**/dist/
+**/dist-ssr/
+**/.turbo/
+**/coverage/
+**/playwright-report/
+**/test-results/
+
+# Environment / secrets (keep only examples)
+.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+*.pem
+*.key
+
+# Logs and OS/editor noise
+*.log
+.DS_Store
+Thumbs.db

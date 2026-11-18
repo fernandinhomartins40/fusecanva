@@ -1,0 +1,88 @@
+{
+  "id": "design-265b1859-e30d-4313-8661-5e082822d6f1",
+  "name": "Editorial lavanda",
+  "type": "design",
+  "width": 794,
+  "height": 1123,
+  "updatedAt": "2026-11-18T03:23:54.791Z",
+  "pages": [
+    {
+      "id": "page-f86d84c5-3348-45a5-bf87-af7b95dcea4a",
+      "name": "Página 1",
+      "background": "#ffffff",
+      "elements": [
+        {
+          "id": "shape-71f65e9f-780b-4959-93ba-0e76cd5c84f9",
+          "type": "shape",
+          "shape": "rect",
+          "name": "Bloco lavanda",
+          "x": 78,
+          "y": 76,
+          "width": 638,
+          "height": 300,
+          "rotation": 0,
+          "fill": "#eeeaff",
+          "cornerRadius": 32
+        },
+        {
+          "id": "text-4d26d6c4-6025-4d38-a18a-857e89879f5b",
+          "type": "text",
+          "name": "Título",
+          "text": "Ideias que\nganham forma",
+          "x": 112,
+          "y": 121,
+          "width": 590,
+          "height": 140,
+          "rotation": 0,
+          "fontSize": 44,
+          "fontFamily": "Arial",
+          "color": "#29263d",
+          "bold": true
+        },
+        {
+          "id": "text-622d4d4c-d87d-4bf5-91b2-a90354865b70",
+          "type": "text",
+          "name": "Subtítulo",
+          "text": "Um espaço para criar, testar e compartilhar.",
+          "x": 118,
+          "y": 278,
+          "width": 500,
+          "height": 50,
+          "rotation": 0,
+          "fontSize": 18,
+          "fontFamily": "Arial",
+          "color": "#625f75",
+          "bold": false
+        },
+        {
+          "id": "shape-b3a4ec7d-d028-492d-b5ed-f2be9f9a5608",
+          "type": "shape",
+          "shape": "ellipse",
+          "name": "Círculo coral",
+          "x": 250,
+          "y": 520,
+          "width": 286,
+          "height": 286,
+          "rotation": 0,
+          "fill": "#ff896f",
+          "cornerRadius": 0
+        },
+        {
+          "id": "text-0f684651-53ae-4534-8d2b-a7f1e1be6312",
+          "type": "text",
+          "name": "Texto do círculo",
+          "text": "Comece por aqui",
+          "x": 263,
+          "y": 635,
+          "width": 260,
+          "height": 54,
+          "rotation": 0,
+          "fontSize": 22,
+          "fontFamily": "Arial",
+          "color": "#ffffff",
+          "bold": true
+        }
+      ]
+    }
+  ]
+}

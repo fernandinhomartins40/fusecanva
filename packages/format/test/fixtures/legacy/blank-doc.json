@@ -1,0 +1,32 @@
+{
+  "id": "design-32857316-984a-411b-8131-5b3f06c3fce1",
+  "name": "Documento sem título",
+  "type": "doc",
+  "width": 794,
+  "height": 1123,
+  "updatedAt": "2026-11-18T03:23:54.814Z",
+  "pages": [
+    {
+      "id": "page-eec02081-e9b7-4064-b596-5a5e18742eb1",
+      "name": "Página 1",
+      "background": "#ffffff",
+      "elements": [],
+      "blocks": [
+        {
+          "id": "block-20ab5456-eeb1-45e5-bfe2-d3fdedd16a8d",
+          "type": "paragraph",
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "docPageSetup": {
+    "preset": "a4",
+    "margins": {
+      "top": 96,
+      "right": 96,
+      "bottom": 96,
+      "left": 96
+    }
+  }
+}

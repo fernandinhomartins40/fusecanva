@@ -1,0 +1,131 @@
+{
+  "id": "design-023f6289-ca0e-4559-93ea-bed0ef3da55a",
+  "name": "Convite criativo",
+  "type": "design",
+  "width": 794,
+  "height": 1123,
+  "updatedAt": "2026-11-18T03:23:54.799Z",
+  "pages": [
+    {
+      "id": "page-53d95640-3a90-4f42-9724-8526f11b07d5",
+      "name": "Página 1",
+      "background": "#fff8ef",
+      "elements": [
+        {
+          "id": "shape-3734b7d2-ed7e-44cf-9e8e-15f57f32f75d",
+          "type": "shape",
+          "shape": "rect",
+          "name": "Cartão central",
+          "x": 58,
+          "y": 72,
+          "width": 678,
+          "height": 960,
+          "rotation": 0,
+          "fill": "#ffffff",
+          "cornerRadius": 24
+        },
+        {
+          "id": "shape-d4932f39-2a46-4d8d-b3dd-d4182af2c40b",
+          "type": "shape",
+          "shape": "rect",
+          "name": "Faixa coral",
+          "x": 58,
+          "y": 72,
+          "width": 678,
+          "height": 24,
+          "rotation": 0,
+          "fill": "#ff896f",
+          "cornerRadius": 12
+        },
+        {
+          "id": "shape-4fcf2b46-2c42-4770-abef-b1c92b79b2e3",
+          "type": "shape",
+          "shape": "ellipse",
+          "name": "Círculo decorativo",
+          "x": 500,
+          "y": 630,
+          "width": 190,
+          "height": 190,
+          "rotation": 0,
+          "fill": "#eeeaff",
+          "cornerRadius": 0
+        },
+        {
+          "id": "text-d180c8fa-a86e-494d-82a3-5486155557d5",
+          "type": "text",
+          "name": "Tipo de evento",
+          "text": "ENCONTRO ABERTO",
+          "x": 102,
+          "y": 160,
+          "width": 570,
+          "height": 44,
+          "rotation": 0,
+          "fontSize": 17,
+          "fontFamily": "Arial",
+          "color": "#7464e8",
+          "bold": true
+        },
+        {
+          "id": "text-03fae3de-67eb-4318-9e49-303226893b08",
+          "type": "text",
+          "name": "Título",
+          "text": "IDEIAS EM\nMOVIMENTO",
+          "x": 98,
+          "y": 246,
+          "width": 570,
+          "height": 194,
+          "rotation": 0,
+          "fontSize": 56,
+          "fontFamily": "Arial",
+          "color": "#29263d",
+          "bold": true
+        },
+        {
+          "id": "text-e147f536-b52a-4a8f-8d8b-3abc83bca6af",
+          "type": "text",
+          "name": "Descrição",
+          "text": "Uma tarde para aprender, compartilhar e criar junto.",
+          "x": 104,
+          "y": 493,
+          "width": 520,
+          "height": 100,
+          "rotation": 0,
+          "fontSize": 23,
+          "fontFamily": "Arial",
+          "color": "#625f75",
+          "bold": false
+        },
+        {
+          "id": "text-bb131e5c-cc12-41da-ad41-480379ca3d8c",
+          "type": "text",
+          "name": "Data",
+          "text": "SÁBADO · 14H",
+          "x": 104,
+          "y": 720,
+          "width": 420,
+          "height": 52,
+          "rotation": 0,
+          "fontSize": 20,
+          "fontFamily": "Arial",
+          "color": "#29263d",
+          "bold": true
+        },
+        {
+          "id": "text-d8865b82-08aa-4988-83d3-35a05188b1c7",
+          "type": "text",
+          "name": "Local",
+          "text": "ESTÚDIO CRIATIVO · CENTRO",
+          "x": 104,
+          "y": 779,
+          "width": 490,
+          "height": 42,
+          "rotation": 0,
+          "fontSize": 13,
+          "fontFamily": "Arial",
+          "color": "#777487",
+          "bold": false
+        }
+      ]
+    }
+  ]
+}

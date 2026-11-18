@@ -1,0 +1,12 @@
+packages:
+  - apps/*
+  - packages/*
+
+# Antes no package.json do web (npm "overrides").
+overrides:
+  uuid: ^11.1.1
+
+# Pacotes com scripts de instalacao permitidos (pnpm 10 bloqueia por padrao).
+onlyBuiltDependencies:
+  - esbuild
+  - turbo

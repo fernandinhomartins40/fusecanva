@@ -1,0 +1,26 @@
+{
+  "name": "fuse-studio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Fuse Studio: suite de design visual aberta, local-first e auto-hospedavel.",
+  "packageManager": "pnpm@10.34.9",
+  "engines": {
+    "node": ">=22.12.0",
+    "pnpm": ">=10.0.0"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "lint": "turbo run lint && node tooling/check-boundaries.mjs",
+    "lint:boundaries": "node tooling/check-boundaries.mjs",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "dev": "turbo run dev --filter=@fuse/web",
+    "dev:api": "pnpm --filter @fuse/web run dev:api",
+    "dev:all": "node infra/docker/dev-all.mjs"
+  },
+  "devDependencies": {
+    "turbo": "2.11.10",
+    "typescript": "~6.0.3"
+  }
+}

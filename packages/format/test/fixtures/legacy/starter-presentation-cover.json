@@ -1,0 +1,116 @@
+{
+  "id": "design-e8550776-f5b0-471f-974a-729f441a17cc",
+  "name": "Abertura de apresentação",
+  "type": "presentation",
+  "width": 1280,
+  "height": 720,
+  "updatedAt": "2026-11-18T03:23:54.809Z",
+  "pages": [
+    {
+      "id": "page-060b4263-a062-480f-a121-a7d41bd434a4",
+      "name": "Slide 1",
+      "background": "#27233b",
+      "elements": [
+        {
+          "id": "shape-152ce5e6-a038-41bf-a7e2-f0901ef05e2e",
+          "type": "shape",
+          "shape": "rect",
+          "name": "Plano violeta",
+          "x": 820,
+          "y": 0,
+          "width": 460,
+          "height": 720,
+          "rotation": 0,
+          "fill": "#8065db",
+          "cornerRadius": 0
+        },
+        {
+          "id": "shape-fdaed1ab-2a60-4aea-a123-a88bc8e3b15c",
+          "type": "shape",
+          "shape": "ellipse",
+          "name": "Arco coral",
+          "x": 940,
+          "y": 410,
+          "width": 240,
+          "height": 240,
+          "rotation": 0,
+          "fill": "#f58c72",
+          "cornerRadius": 0
+        },
+        {
+          "id": "shape-48113d0f-46eb-46a5-8ca1-aa568ee82cc2",
+          "type": "shape",
+          "shape": "ellipse",
+          "name": "Ponto creme",
+          "x": 1060,
+          "y": 478,
+          "width": 92,
+          "height": 92,
+          "rotation": 0,
+          "fill": "#f4dfb5",
+          "cornerRadius": 0
+        },
+        {
+          "id": "text-18502a2f-ec10-4197-ba77-6d76a888d2d2",
+          "type": "text",
+          "name": "Série",
+          "text": "ESTRATÉGIA  /  2026",
+          "x": 72,
+          "y": 68,
+          "width": 690,
+          "height": 48,
+          "rotation": 0,
+          "fontSize": 20,
+          "fontFamily": "Arial",
+          "color": "#c9baf3",
+          "bold": true
+        },
+        {
+          "id": "text-d1945e43-d33c-4943-ad0b-da7ad9d185cc",
+          "type": "text",
+          "name": "Título",
+          "text": "O próximo\ncapítulo",
+          "x": 68,
+          "y": 185,
+          "width": 760,
+          "height": 230,
+          "rotation": 0,
+          "fontSize": 72,
+          "fontFamily": "Arial",
+          "color": "#ffffff",
+          "bold": true
+        },
+        {
+          "id": "text-53d8e224-835b-4a6e-9eae-db38e5d86d34",
+          "type": "text",
+          "name": "Subtítulo",
+          "text": "Ideias para construir o que vem depois.",
+          "x": 76,
+          "y": 482,
+          "width": 700,
+          "height": 60,
+          "rotation": 0,
+          "fontSize": 25,
+          "fontFamily": "Arial",
+          "color": "#ddd8e9",
+          "bold": false
+        },
+        {
+          "id": "text-d26bdcf0-0b2f-4239-9627-61ad4aef589b",
+          "type": "text",
+          "name": "Rodapé",
+          "text": "APRESENTADO POR SUA EQUIPE",
+          "x": 78,
+          "y": 648,
+          "width": 620,
+          "height": 28,
+          "rotation": 0,
+          "fontSize": 14,
+          "fontFamily": "Arial",
+          "color": "#c9baf3",
+          "bold": true
+        }
+      ]
+    }
+  ]
+}
