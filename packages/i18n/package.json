@@ -23,10 +23,10 @@
     "@formatjs/icu-messageformat-parser": "^3.5.23",
     "@types/node": "^22.20.5",
     "typescript": "~6.0.3",
-    "vitest": "5.1.0"
+    "vitest": "5.1.1"
   },
   "dependencies": {
-    "@formatjs/intl": "^6.1.6",
+    "@formatjs/intl": "^6.2.0",
     "intl-messageformat": "^12.2.0"
   }
 }
