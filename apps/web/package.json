@@ -99,7 +99,7 @@
     "oxlint": "^1.88.0",
     "pdfjs-dist": "^6.4.299",
     "pngjs": "^5.0.0",
-    "typescript": "~6.0.3",
+    "typescript": "~7.0.2",
     "vite": "^8.3.4"
   }
 }
