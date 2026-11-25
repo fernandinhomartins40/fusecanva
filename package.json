@@ -20,7 +20,7 @@
     "dev:all": "node infra/docker/dev-all.mjs"
   },
   "devDependencies": {
-    "turbo": "2.11.10",
+    "turbo": "2.11.13",
     "typescript": "~6.0.3"
   }
 }
